@@ -6,6 +6,7 @@ import { PaymentForm } from "@/components/form/PaymentForm";
 import { CardPreview } from "@/components/preview/CardPreview";
 import { StatusScreen } from "@/components/status/StatusScreen";
 import { TransactionHistory } from "@/components/history/TransactionHistory";
+import { SkipLink } from "@/components/SkipLink";
 import { usePayment } from "@/hooks";
 import type { CardFormValues, PaymentStatus } from "@/types";
 
@@ -34,6 +35,8 @@ export function PaymentExperience() {
 
   return (
     <div className="min-h-screen bg-slate-50">
+      <SkipLink />
+
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-5xl items-center gap-2 px-4 py-4 sm:px-6">
           <Lock className="h-4 w-4 text-slate-700" aria-hidden />

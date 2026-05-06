@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   CardholderNameInput,
@@ -44,6 +45,7 @@ export function PaymentForm({ onValuesChange }: PaymentFormProps) {
     <form
       onSubmit={handleSubmit}
       noValidate
+      autoComplete="on"
       className="flex flex-col gap-4"
       aria-busy={isProcessing}
     >
@@ -95,9 +97,16 @@ export function PaymentForm({ onValuesChange }: PaymentFormProps) {
         ref={submitRef}
         type="submit"
         disabled={!form.isValid || isLocked}
-        className="mt-2 w-full"
+        className="mt-2 h-11 w-full"
       >
-        {isProcessing ? "Processing…" : "Pay Now"}
+        {isProcessing ? (
+          <span className="inline-flex items-center gap-2">
+            <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
+            Processing…
+          </span>
+        ) : (
+          "Pay Now"
+        )}
       </Button>
     </form>
   );

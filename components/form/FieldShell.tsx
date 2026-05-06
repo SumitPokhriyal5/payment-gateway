@@ -26,14 +26,20 @@ export function FieldShell({
 
   return (
     <div className={cn("flex flex-col gap-1.5", className)}>
-      <Label htmlFor={id}>{label}</Label>
+      <Label htmlFor={id} className="text-sm font-medium text-slate-700">
+        {label}
+      </Label>
       {children({
         id,
         "aria-invalid": hasError,
         "aria-describedby": hasError ? errorId : undefined,
       })}
       {hasError ? (
-        <p id={errorId} role="alert" className="text-sm text-red-600">
+        <p
+          id={errorId}
+          role="alert"
+          className="text-sm leading-tight text-red-600"
+        >
           {error}
         </p>
       ) : null}
