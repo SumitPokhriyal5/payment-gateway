@@ -2,9 +2,23 @@
 
 A mock payment gateway built with Next.js (App Router) and TypeScript. Simulates the full payment lifecycle — form validation, processing states, retries, timeouts, and persistent transaction history — without any real payment SDK.
 
-**Live demo:** [your-vercel-url-here]
+**Live demo:** https://payment-gateway-cyan-three.vercel.app/
 
 ---
+
+## Screenshots
+
+### Payment Success
+<img width="1508" height="957" alt="Image" src="https://github.com/user-attachments/assets/9b24e166-22a9-4ab4-87c1-ded57a153fe1" />
+
+### Payment Method
+<img width="1508" height="957" alt="Image" src="https://github.com/user-attachments/assets/b2b43a8b-0fdb-41f6-bfb4-0fd5ca634aaf" />
+
+### Transaction Details
+<img width="1508" height="957" alt="Image" src="https://github.com/user-attachments/assets/d9c95fca-9d8e-4847-af71-d91ff7fa4527" />
+
+### Payment Failed
+<img width="1508" height="957" alt="Image" src="https://github.com/user-attachments/assets/e8fcdba7-e7f0-4c03-8622-3d89ce85a2de" />
 
 ## Quick start
 
@@ -38,6 +52,7 @@ Outcomes are randomized server-side: ~60% success, ~25% failure, ~15% timeout.
 
 ## Architecture
 
+```
 app/
 ├── api/pay/route.ts Mock gateway endpoint
 ├── layout.tsx
@@ -59,6 +74,7 @@ store/
 └── historyStore.ts Persisted transaction history
 types/ PaymentPayload, Transaction, CardType, etc.
 utils/ formatters, validators, card detection, constants
+```
 
 ## Key technical decisions
 
