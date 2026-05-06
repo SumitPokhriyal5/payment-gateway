@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Payment Gateway",
-  description: "Mock payment gateway with full lifecycle handling",
+  title: "Secure Checkout · Payment Gateway",
+  description:
+    "Mock payment gateway with full lifecycle handling and retry logic",
 };
 
 export default function RootLayout({
