@@ -5,3 +5,4 @@ export * from "./CVVInput";
 export * from "./AmountInput";
 export * from "./CardBrandBadge";
 export * from "./FieldShell";
+export * from "./PaymentForm";
